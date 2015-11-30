@@ -34,7 +34,7 @@ function loadData() {
     })
     var wikiUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + cityStr + '&format=json&callback=wikiCallback'
     var wikiRequestTimeOut = setTimeout(function(){
-      $wikiElem.append('failed to get wikipedia resources')
+      $wikiElem.text('failed to get wikipedia resources')
     }, 8000) 
     $.ajax({
       url: wikiUrl,
